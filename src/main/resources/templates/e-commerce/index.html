@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sana Sana Babu Nani Online Store</title>
+    <!-- Favicon -->
+    <link rel="icon" th:href="@{/images/SSBNOS Logo.png}" type="image/png">
+    <!-- External CSS -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="header-flex">
+                <div class="logo-title">
+                    <img th:src="@{/images/SSBNOS Logo.png}" alt="SSBNOS Logo" class="logo">
+                    <h1><b>Sana Sana Babu Nani Online Store</b></h1>
+                </div>
+                <div class="search-login">
+                    <input type="text" id="search" name="search" placeholder="Search for products...">
+                    <button type="button" class="btn btn-primary">Search</button>
+                    <div id="search-suggestions" class="suggestions-dropdown"></div>&nbsp;
+                    <nav>
+                        <div class="nav navbar-nav navbar-right">
+                            <a th:href="@{/login}"><span class="glyphicon glyphicon-user"></span></a> &nbsp;
+                            <a th:href="@{/carts}"><span class="glyphicon glyphicon-shopping-cart"></span>
+                                <span class="badge">0</span></a>&nbsp;
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a th:href="@{/home}">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Collection <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a th:href="@{/boysdress}">Boy Dress</a></li>
+                                <li><a th:href="@{/girlsdress}">Girl Dress</a></li>
+                                <li><a th:href="@{/newarrival}">New Arrival</a></li>
+                                <li><a th:href="@{/bestseller}">Best Seller</a></li>
+                                <li><a th:href="@{/toy}">Toy</a></li>
+                            </ul>
+                        </li>
+                        <li><a th:href="@{/faqs}">FAQs</a></li>
+                        <li><a th:href="@{/contact}">Contact-Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section id="home">
+            <h2><b>Home</b></h2>
+            <p style="font-size: 18px;">Welcome to our online store. 
+                Browse our products and enjoy shopping!</p>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+              
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <img src="https://cdn.cdnparenting.com/articles/2017/10/418461847-H.webp" 
+                      alt="shopping1"><span class="caption"> shop now </span>
+                    </div>
+              
+                    <div class="item">
+                      <img src="https://m.economictimes.com/thumb/msid-54631056,width-1200,height-900,resizemode-4,imgsize-62192/startups-shifting-focus-towards-baby-products-for-better-value.jpg" 
+                      alt="shopping2"><span class="caption"> shop now </span>
+                    </div>
+                  
+                    <div class="item">
+                      <img src="https://ecommercechinaagency.com/wp-content/uploads/2022/12/li-tzuni-507346-unsplash-scaled.jpg" 
+                      alt="shopping3"><span class="caption"> shop now </span>
+                    </div>
+
+                    <div class="item">
+                      <img src="https://m.media-amazon.com/images/I/613yNNItGmS.jpg" 
+                      alt="shopping4"><span class="caption"> shop now </span>
+                    </div>
+
+
+                    <div class="item">
+                      <img src="https://as2.ftcdn.net/v2/jpg/07/54/87/67/1000_F_754876763_005BcOn88WtIxPPPrp7GxzmJpq6v6StG.jpg" 
+                      alt="shopping5"><span class="caption"> shop now </span>
+                    </div>
+
+                
+                  </div>
+              
+                  <!-- Left and right controls -->
+                  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+
+        <hr>
+
+        <section id="products">
+            <h2><b>Products</b></h2>
+
+            <div class="products-container">
+                <!-- Product 1 -->
+            <div class="product">
+                <a href="product1.html">
+                    <img th:src="@{/images/Dress.jpg}" 
+                    alt="Long Sleeve Baby Boy Girl Bodysuit" class="img-rounded">
+                </a>
+                <h3>Long Sleeve Baby Boy Girl Bodysuit</h3>
+                <!-- Rating Stars -->
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="5 stars">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="4 stars">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="3 stars">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="2 stars">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="1 star">1 star</label>
+                  </div>
+        
+                <p>Rs. 500</p>
+                <a href="product1.html">
+                    <button type="button" class="btn btn-default">View Details</button>
+                </a>
+                <button type="button" class="btn btn-default">Add to Cart</button>
+            </div>
+
+                <!-- Product 2 -->
+            <div class="product">
+                <a href="product2.html">
+                    <img th:src="@{/images/Boy Dress.jpg}" 
+                    class="img-rounded" alt="Boy Dress">
+                </a>
+                <h3>Children's Summer Vest Shorts Suit</h3>
+                <!-- Rating Stars -->
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="5 stars">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="4 stars">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="3 stars">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="2 stars">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="1 star">1 star</label>
+                  </div>
+                <p>Rs. 500</p>
+                <a href="product2.html">
+                    <button type="button" class="btn btn-default">View Details</button>
+                </a>
+                <button type="button" class="btn btn-default">Add to Cart</button>
+            </div>
+
+                <!-- Product 3 -->
+            <div class="product">
+                <a href="product3.html">
+                    <img th:src="@{/images/Socks.jpg}" 
+                    alt="Socks" class="img-rounded">
+                </a>
+                <h3>Girls Solid Knee-High Socks Stockings</h3>
+                <!-- Rating Stars -->
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="5 stars">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="4 stars">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="3 stars">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="2 stars">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="1 star">1 star</label>
+                  </div>
+                <p>Rs. 500</p>
+                <a href="product3.html">
+                    <button type="button" class="btn btn-default">View Details</button>
+                </a>
+                <button type="button" class="btn btn-default">Add to Cart</button>
+            </div>
+
+                <!-- Product 4 -->
+                <div class="product">
+                    <a href="product4.html">
+                        <img th:src="@{/images/Girl trouser.jpg}" 
+                        alt="Girl Trouser" class="img-rounded">
+                    </a>
+                    <h3>Floral Size Small to Medium (7-8) Leggings</h3>
+                    <!-- Rating Stars -->
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label for="star5" title="5 stars">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label for="star4" title="4 stars">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label for="star3" title="3 stars">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label for="star2" title="2 stars">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label for="star1" title="1 star">1 star</label>
+                  </div>
+                    <p>Rs. 500</p>
+                    <a href="product4.html">
+                        <button type="button" class="btn btn-default">View Details</button>
+                    </a>
+                    <button type="button" class="btn btn-default">Add to Cart</button>
+            </div>
+
+           <div class="button-container">
+            <a href="seemore.html"><button type="button" class="btn btn-primary">
+              See More</button></a>
+</div>
+
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sana Sana Babu Nani Online Store. All rights reserved.</p>
+    </footer>
+
+    <div id="ad-popup">
+        <div class="ad-content">
+            <h2>Special Offer!</h2>
+            <p>Get 10% off on your first purchase. Order Now!</p>
+            <img th:src="@{/images/ads.png}" alt="Special Offer" class="img-rounded">
+
+            <br><br>
+            <button id="close-ad-btn" type="button" class="btn btn-primary">Close</button>
+        </div>
+    </div>
+
+    <script th:src="@{/js/ads.js}"></script>
+	<script th:src="@{/js/search.js}"></script>
+	
+</body>
+</html>
